@@ -1,0 +1,49 @@
+1. Tools
+  - python
+    - paramiko/netmiko/NAPALM
+    - Jinja2
+  - Ansible
+  - Salt
+  - YAML/JSON/XML
+  - NETCONF/REST/Openconfig
+
+2. Code
+  - Vars, Lists, Dictionarys
+  - For, If, While
+  - Functions
+    - Helpers
+  - Libraries
+  - Git
+    - Clone Repository
+
+3. Scripts
+  - Log Splitter
+  - Regexp Template with TextFSM
+  - SecureCRT
+
+4. Projects
+  - EASY
+    - Read/Write Functions
+      - (Code simplicity, Comments Raw, CSV, Newline, Verbose)
+    - Convert ConfigGen to use new functions
+
+  - MEDIUM
+    - Develop TextFSM Regexp templates
+      - Write to List (i.e 'sh int status')
+      - Select only first item in list on multiple returns -> Cisco IOS Version
+      - clitables
+    - Read/Write to Directory
+    - Regexp Replace Script on directory/Files
+    - Diff Function on directory/Files
+    - Ansible GET/SET scripts
+      - Direct & Via Terminal Server
+
+  - HARD
+    - SecureCRT .py script
+      - Pre/Post button based on template
+      - Log Roll button
+      - Diff button
+
+./config_generator.py -c inputs/csv_example.csv -t templates/template_example.j2 -o outputs/
+./log_splitter.py -i inputs/showtech_full.log -o outputs/ -t tech
+./Configparse.py -i inputs/showtech_full.log -o outputs/ -t templates/cisco_ios_audit_template.textfsm

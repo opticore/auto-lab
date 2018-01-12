@@ -1,0 +1,65 @@
+# XML
+<interfaces xmlns:=“urn:ietfparams:xml:ns:yang:ietf-interfaces”>
+    <interface>
+        <name>eth0</name>
+        <type>ethernetCsmacd</type>
+        <location>0</location>
+        <enabled>true</enabled>
+        <if-index>2</if-index>
+    </interface>
+    <interface>
+        <name>eth1</name>
+        <type>ethernetCsmacd</type>
+        <location>1</location>
+        <enabled>false</enabled>
+        <if-index>7</if-index>
+    </interface>
+</interfaces>
+
+# JSON
+{
+   "ietf-interfaces:interfaces": {
+      "interface": [
+          {
+              "name": "eth0”,
+              "type": "ethernetCsmacd”,
+              "location": "0”,
+              "enabled": true,
+              "if-index": 2
+          },
+          {
+              "name": "eth1”,
+              "type": "ethernetCsmacd”,
+              "location": "1”,
+              "enabled": false,
+              "if-index": 2
+          }
+       ]
+    }
+}
+
+# YAML
+interfaces:
+    - name: eth0
+      type: ethernetCsmacd
+      location: 0
+      enabled: true
+      if-index: 2
+    - name: eth1
+      type: ethernetCsmacd
+      location: 1
+      enabled: false
+      if-index: 3
+
+
+# YANG Model
+module: SystemTime
++--rw SystemTime
+  +--ro Clock       uint16
+    +--ro Year      uint8
+    +--ro Month     uint8
+    +--ro Day       uint8
+    +--ro Timezone  string
+  +--ro Uptime
+    +--ro Uptime    uint32
+    +--ro Hostname  string
